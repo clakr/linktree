@@ -14,22 +14,27 @@ import Link from '../components/Link.astro'
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="max-w-screen-md mx-auto px-8">
-		<header class="grid grid-cols-3 gap-x-4 items-center">
-			<Image alt="Clark's Avatar" src={avatar} class="rounded-full" />
-			<div class="col-span-2 space-y-2">
-				<h1 class="font-black text-4xl">Clark Kenneth C. Tolosa</h1>
-				<p>I am a passionate Web Developer.</p>
-				<p>
-					Currently in love with Frontend Engineering with libraries and modern JavaScript frameworks with the likes of Tailwind CSS, React, and Next. Also interested in managing, interpreting, and visualizing data in the Backend and engineering the connection of both Frontend and Backend.
-				</p>
-				<p>Capable of Full Stack Web Development. Knowledgeable in modern technologies.</p>
-			</div>
-		</header>
-		<main>
-			{links.map(() => (
-				<Link />
-			))}
-		</main>
+	<body class="max-w-screen-md mx-auto font-medium text-neutral-950 bg-neutral-100 py-8">
+		<section class="bg-white gap-y-8 flex flex-col p-8 rounded-xl shadow-lg">
+			<header class="grid grid-cols-3 gap-x-4 items-center">
+				<Image alt="Clark's Avatar" src={avatar} class="rounded-full" />
+				<div class="col-span-2 space-y-2 text-sm">
+					<h1 class="font-black text-4xl">Clark Kenneth C. Tolosa</h1>
+					<p>I am a passionate Web Developer.</p>
+					<p>
+						Currently in love with Frontend Engineering with libraries and modern JavaScript frameworks with the likes of Tailwind CSS, React, and Next. Also interested in managing, interpreting, and visualizing data in the Backend and engineering the connection of both Frontend and Backend.
+					</p>
+					<p>Capable of Full Stack Web Development. Knowledgeable in modern technologies.</p>
+				</div>
+			</header>
+			<main class="flex flex-col gap-y-4">
+				{links.map(({ label, icon, ...rest }) => (
+					<Link {...rest}>
+						<span class={icon}></span>
+						{ label }
+					</Link>
+				))}
+			</main>
+		</section>
 	</body>
 </html>

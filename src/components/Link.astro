@@ -1,8 +1,11 @@
 ---
-const {} = Astro.props
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = HTMLAttributes<'a'>
+
+const {...rest } = Astro.props
 ---
 
-<a href="#">
-  qweqweq
+<a class="border-2 border-neutral-950 py-3 rounded-2xl hover:bg-neutral-200 focus:bg-neutral-200 active:-translate-y-1 transition-transform flex justify-center items-center gap-x-2 [&>span]:size-6 shadow-md" target="_blank" {...rest}>
   <slot />
 </a>
