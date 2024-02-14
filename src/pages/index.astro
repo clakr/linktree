@@ -1,5 +1,9 @@
 ---
-
+import { Image } from "astro:assets";
+import avatar from '../assets/avatar.png'
+import '@fontsource-variable/inter'
+import { links } from '../constants.ts'
+import Link from '../components/Link.astro'
 ---
 
 <html lang="en">
@@ -10,7 +14,22 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="max-w-screen-md mx-auto px-8">
+		<header class="grid grid-cols-3 gap-x-4 items-center">
+			<Image alt="Clark's Avatar" src={avatar} class="rounded-full" />
+			<div class="col-span-2 space-y-2">
+				<h1 class="font-black text-4xl">Clark Kenneth C. Tolosa</h1>
+				<p>I am a passionate Web Developer.</p>
+				<p>
+					Currently in love with Frontend Engineering with libraries and modern JavaScript frameworks with the likes of Tailwind CSS, React, and Next. Also interested in managing, interpreting, and visualizing data in the Backend and engineering the connection of both Frontend and Backend.
+				</p>
+				<p>Capable of Full Stack Web Development. Knowledgeable in modern technologies.</p>
+			</div>
+		</header>
+		<main>
+			{links.map(() => (
+				<Link />
+			))}
+		</main>
 	</body>
 </html>
