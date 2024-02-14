@@ -11,12 +11,12 @@ export const links = [
 	},
 	{
 		label: "Resume / Curriculum Vitae",
-		href: "https://ckt.fyi/",
+		href: "https://cv.ckt.fyi/",
 		icon: "icon-[mdi--resume]",
 	},
 	{
 		label: "frontendmentor.io Projects",
-		href: "https://fm-projects-clakr.vercel.app/",
+		href: "https://fm.ckt.fyi/",
 		icon: "icon-[simple-icons--frontendmentor]",
 	},
 ];
