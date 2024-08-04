@@ -1,20 +1,27 @@
 ---
 import "index.css";
 import Main from "@components/Main.astro";
+import { NAME, OCCUPATION, DESCRIPTIONS, KEYWORDS } from "../constants";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.ico" />
+
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+
+    <title>{NAME} - {OCCUPATION}</title>
+
+    <meta name="description" content={DESCRIPTIONS.join(" ")} />
+    <meta name="author" content={NAME} />
+    <meta name="keywords" content={KEYWORDS.join(", ")} />
 
     <link
       rel="preload"
       as="font"
-      href="/Montserrat.ttf"
+      href="/fonts/Montserrat.ttf"
       type="font/ttf"
       crossorigin="anonymous"
     />

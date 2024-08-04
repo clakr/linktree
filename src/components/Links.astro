@@ -1,11 +1,11 @@
 ---
-import { links } from "../constants";
+import { LINKS } from "../constants";
 import Link from "@components/Link.astro";
 ---
 
 <section class="flex flex-col gap-y-3 md:col-span-2">
   {
-    links.map(({ icon, label, href }) => (
+    LINKS.map(({ icon, label, href }) => (
       <Link href={href}>
         <Fragment set:html={icon} />
         {label}
