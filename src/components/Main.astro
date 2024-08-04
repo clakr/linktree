@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import avatar from "@assets/avatar.webp";
+import Links from "@components/Links.astro";
+---
+
+<main
+  class="flex w-full max-w-[calc(100vw-2rem)] flex-col gap-y-6 rounded-[24px] bg-white p-4 shadow shadow-neutral-950/10"
+>
+  <Image src={avatar} alt="" class="self-center" />
+  <h1 class="text-pretty text-center text-4xl font-bold">
+    Clark Kenneth C. Tolosa
+  </h1>
+  <Links />
+</main>

@@ -1,0 +1,15 @@
+---
+import { links } from "../constants";
+import Link from "@components/Link.astro";
+---
+
+<section class="flex flex-col gap-y-3">
+  {
+    links.map(({ icon, label }) => (
+      <Link>
+        <Fragment set:html={icon} />
+        {label}
+      </Link>
+    ))
+  }
+</section>
