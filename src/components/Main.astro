@@ -2,14 +2,13 @@
 import { Image } from "astro:assets";
 import avatar from "@assets/avatar.webp";
 import Links from "@components/Links.astro";
+import About from "@components/About.astro";
 ---
 
 <main
-  class="flex w-full max-w-[calc(100vw-2rem)] flex-col gap-y-6 rounded-[24px] bg-white p-4 shadow shadow-neutral-950/10"
+  class="grid w-full max-w-[calc(100vw-2rem)] gap-y-6 rounded-[24px] bg-white p-4 shadow shadow-neutral-950/10 md:max-w-[736px] md:grid-cols-2 md:p-8"
 >
-  <Image src={avatar} alt="" class="self-center" />
-  <h1 class="text-pretty text-center text-4xl font-bold">
-    Clark Kenneth C. Tolosa
-  </h1>
+  <Image src={avatar} alt="" class="self-center justify-self-center" />
+  <About />
   <Links />
 </main>
