@@ -1,58 +1,16 @@
 ---
-import { Image } from "astro:assets";
-import avatar from "../assets/avatar.png";
-import "@fontsource-variable/inter";
-import { links } from "../constants";
-import Link from "../components/Link.astro";
+
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body
-    class="mx-auto max-w-screen-md text-pretty bg-neutral-100 p-4 font-medium text-neutral-950"
-  >
-    <section class="flex flex-col gap-y-8 rounded-xl bg-white p-6 shadow-lg">
-      <header class="grid items-center justify-center gap-y-4 md:grid-cols-2">
-        <Image
-          alt="Clark's Avatar"
-          src={avatar}
-          class="justify-self-center rounded-full md:row-span-2"
-          loading="eager"
-        />
-        <h1 class="text-center text-4xl font-black md:text-start">
-          Clark Kenneth C. Tolosa
-        </h1>
-        <div class="hidden space-y-2 md:block">
-          <p>I am a passionate Web Developer.</p>
-          <p>
-            Currently in love with Frontend Engineering with libraries and
-            modern JavaScript frameworks with the likes of Tailwind CSS, React,
-            and Next. Also interested in managing, interpreting, and visualizing
-            data in the Backend and engineering the connection of both Frontend
-            and Backend.
-          </p>
-          <p>
-            Capable of Full Stack Web Development. Knowledgeable in modern
-            technologies.
-          </p>
-        </div>
-      </header>
-      <main class="flex flex-col gap-y-4">
-        {
-          links.map(({ label, icon, ...rest }) => (
-            <Link {...rest}>
-              <span class={icon} />
-              {label}
-            </Link>
-          ))
-        }
-      </main>
-    </section>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+	</body>
 </html>
